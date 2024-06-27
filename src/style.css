@@ -1,0 +1,168 @@
+:root {
+    --background-color: rgb(194, 194, 194);
+    --color-black: black;
+}
+
+
+body {
+    align-items: center;
+    background-color: white;
+    box-sizing: border-box;
+    display: flex;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+
+header {
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    display: flex;
+    height: 12vh;
+    max-height: 12vh;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+}
+
+nav {
+    align-items: center;
+    display: flex;
+    height: 10vh;
+    justify-content: space-around;
+    margin: 0 auto;
+    width: clamp(50vw, 75vw, 100vw);
+}
+
+nav > * {
+    background-color: var(--background-color);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    font-weight: 600;
+    padding: 8px 20px;
+    position: relative;
+}
+
+nav > button:active {
+    transform: scale(0.95);
+}
+
+nav > button:after {
+    background-color: var(--background-color);
+    content: " ";
+    height: 3px;
+    left: 50%;
+    opacity: 0.6;
+    position: absolute;
+    top: 125%;
+    transform: translate(-50%, -50%);
+    transform-origin: bottom left;
+    transition: width .2s ease;
+    width: 0rem;
+}
+
+nav > button:hover {
+    cursor: pointer;
+}
+
+nav > button:hover::after {
+    width: 4.7rem;
+}
+
+#content {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 12vh;
+    width: 100vw;
+    z-index: -999;
+}
+
+.card {
+    background-color: white;
+    border: 1px solid var(--background-color);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 100px;
+    margin-top: 30px;
+    max-width: 100%;
+    text-align: center;
+    width: 500px;
+}
+
+.card > * {
+    margin: 2% auto;
+}
+
+.card.about {
+    padding: 30px;
+    text-align: left;
+}
+
+.card.about > .section-name {
+    margin: 20px auto 0 auto;
+}
+
+.dish > .ingredients {
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+.title {
+    border-bottom: 2px solid var(--color-black);
+    width: max-content;
+}
+
+.welcome-text {
+    padding: 0 5% 5% 5%;
+    text-align: left;
+}
+
+footer {
+    align-items: center;
+    background-color: white;
+    bottom: 0;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    height: 12vh;
+    justify-content: center;
+    line-height: 0.6;
+    margin-top: 300px;
+    max-height: 12vh;
+    position: fixed;
+    text-align: center;
+    width: 100vw;
+}
+
+#copy {
+    align-items: center;
+    color: #c3c3c3;
+    display: flex;
+    font-size: 0.8rem;
+    gap: 5px;
+}
+
+#copy > a {
+    text-decoration: none;
+}
+
+#copy > a > i {
+    color: #c3c3c3;
+    font-size: 1.1rem;
+}
+
+#rights {
+    color: #c3c3c3;
+    font-size: 0.8rem;
+}
+
